@@ -1,0 +1,28 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Hello</title>
+</head>
+<body>
+<h1 th:text="${message}">Hello World</h1>
+<table>
+    <th>
+        <td>NO.</td>
+        <td>name</td>
+        <td>age</td>
+        <td>status</td>
+    </th>
+    <tr th:each="item, itemState : ${list}">
+        <td th:text="${itemState.index}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.age}"></td>
+        <td th:text="${item.pass}"></td>
+    </tr>
+</table>
+
+<form method="post" action="upload" enctype="multipart/form-data">
+    <input type="file" name="file" /><br/>
+    <input type="submit" value="提交" />
+</form>
+</body>
+</html>
