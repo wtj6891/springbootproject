@@ -46,7 +46,7 @@ public class WelcomeController {
         user3.setPass("Pass");
         list.add(user3);
         model.put("list", list);
-        return "welcome";
+        return "chatRoom";
     }
 
     @PostMapping("/upload")
